@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Character Counter</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Analyze your text<br><span>in real-time.</span></h1>
+    
+    <textarea id="inputText" placeholder="Start typing here... (or paste your text)"></textarea>
+    
+    <div class="options">
+      <label><input type="checkbox" id="includeSpaces" checked /> Include Spaces</label>
+      <label><input type="checkbox" id="setLimit"/> Set Character Limit (150)</label>
+    </div>
+    
+    <p id="warning" class="hidden">⚠️ Character limit exceeded!</p>
+    
+    <div class="stats">
+      <div class="box purple"><p id="charCount">00</p><span>Total Characters</span></div>
+      <div class="box orange"><p id="wordCount">00</p><span>Word Count</span></div>
+      <div class="box red"><p id="sentenceCount">00</p><span>Sentence Count</span></div>
+    </div>
+
+    <div class="density">
+      <h3>Letter Density</h3>
+      <p id="densityResult">No characters found. Start typing to see letter density.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
